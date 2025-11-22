@@ -1,3 +1,12 @@
+/* ========== CSS Variables ========== */
+:root {
+    --body-font: Arial, sans-serif;
+    --heading-font: 'Georgia', serif;
+    --primary-color: #005f73;
+    --accent1-color: #0a9396;
+    --accent2-color: #94d2bd; /* optional */
+}
+
 /* ========== Reset Box Model ========== */
 * {
     margin: 0;
@@ -5,18 +14,10 @@
     box-sizing: border-box;
 }
 
-/* ========== CSS Variables ========== */
-:root {
-    --body-font: Arial, sans-serif;
-    --heading-font: 'Georgia', serif;
-    --primary-color: #004b59; /* darker blue for contrast */
-    --accent1-color: #007f88; /* darker teal for contrast */
-}
-
 /* ========== Body & Layout ========== */
 body {
     font-family: var(--body-font);
-    color: #000; /* dark text for readability */
+    color: var(--accent1-color);
     background-color: #fefefe;
 }
 
@@ -38,7 +39,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -46,7 +47,7 @@ nav a {
 
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--accent1-color);
+    color: var(--primary-color);
 }
 
 nav, p, section, article {
@@ -71,7 +72,7 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.85;
+    opacity: 0.8;
     background-color: var(--accent1-color);
     color: #fff;
 }
@@ -81,10 +82,13 @@ nav, p, section, article {
     bottom: 20px;
     left: 20px;
     width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
 }
 
 .hero article h2 {
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 
 .hero article img {
@@ -101,4 +105,21 @@ nav, p, section, article {
 .socialmedia img {
     width: 30px;
     margin: 0 5px;
+}
+
+/* ========== Color Contrast Fixes ========== */
+body {
+    color: #00333f; /* mejor contraste que var(--accent1-color) sobre blanco */
+}
+
+nav a {
+    color: #ffffff; /* mantiene contraste suficiente */
+}
+
+.hero h1 {
+    color: #ffffff; /* mantiene contraste con overlay */
+}
+
+.hero article p {
+    color: #00333f; /* texto sobre fondo semitransparente */
 }

@@ -40,7 +40,7 @@ nav {
 }
 
 nav a {
-    color: var(--accent2-color); /* texto blanco para contraste */
+    color: var(--accent2-color); /* blanco para contraste correcto */
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
@@ -75,8 +75,8 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(10, 147, 150, 0.9); /* overlay más oscuro para contraste */
-    color: var(--accent2-color); /* texto blanco */
+    background-color: rgba(0, 51, 63, 0.8); /* overlay oscuro para contraste */
+    color: var(--accent2-color); /* blanco */
     opacity: 1;
 }
 
@@ -95,8 +95,8 @@ nav, p, section, article {
 
 /* ================= Footer ================= */
 footer {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+    background-color: var(--primary-color); /* azul oscuro */
+    color: var(--accent2-color); /* blanco */
     text-align: center;
     padding: 20px 10px;
     font-size: 0.9em;

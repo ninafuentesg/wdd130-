@@ -1,17 +1,13 @@
 /* ================= Universal Reset ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* ================= CSS Variables ================= */
 :root {
-    --body-font: Arial, sans-serif;
-    --heading-font: 'Georgia', serif;
-    --primary-color: #005f73;   /* azul oscuro */
-    --accent1-color: #0a9396;   /* verde-azulado */
-    --accent2-color: #ffffff;   /* blanco para contraste */
+   --body-font: Arial, sans-serif;
+  --heading-font: 'Georgia', serif;
+  --primary-color: #005f73;
+  --accent1-color: #0a9396;
+  --accent2-color: #ffffff;
 }
 
 /* ================= Body & Layout ================= */

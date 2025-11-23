@@ -1,19 +1,20 @@
-/* ================= Universal Reset ================= */
-* { margin: 0; 
-    padding: 0;
-    box-sizing:
-    border-box; }
-
-/* ================= CSS Variables ================= */
+/* ========== CSS Variables ========== */
 :root {
-   --body-font: Arial, sans-serif;
-  --heading-font: 'Georgia', serif;
-  --primary-color: #005f73;
-  --accent1-color: #0a9396;
-  --accent2-color: #ffffff;
+    --body-font: Arial, sans-serif;
+    --heading-font: 'Georgia', serif;
+    --primary-color: #005f73;      /* Azul oscuro principal */
+    --accent1-color: #0a9396;      /* Azul más claro */
+    --accent2-color: #ffffff;      /* Blanco para textos y contrastes */
 }
 
-/* ================= Body & Layout ================= */
+/* ========== Universal Selector Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== Body & Layout ========== */
 body {
     font-family: var(--body-font);
     color: var(--primary-color);
@@ -31,7 +32,6 @@ header img {
     margin: 10px auto;
 }
 
-/* ================= Navigation ================= */
 nav {
     background-color: var(--primary-color);
     padding: 10px;
@@ -39,25 +39,25 @@ nav {
 }
 
 nav a {
-    color: var(--accent2-color); /* blanco para contraste correcto */
+    color: var(--accent2-color);
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
 }
 
-/* ================= Headings ================= */
+/* Headings */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* ================= Sections & Text ================= */
+/* Margins for main elements */
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
 }
 
-/* ================= Hero Section ================= */
+/* ========== Hero Section ========== */
 .hero {
     position: relative;
 }
@@ -74,9 +74,8 @@ nav, p, section, article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(0, 51, 63, 0.8); /* overlay oscuro para contraste */
-    color: var(--accent2-color); /* blanco */
-    opacity: 1;
+    background-color: rgba(10, 147, 150, 0.8); /* overlay con transparencia */
+    color: var(--accent2-color);
 }
 
 .hero article {
@@ -84,6 +83,9 @@ nav, p, section, article {
     bottom: 20px;
     left: 20px;
     width: 300px;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8); /* fondo semitransparente */
+    padding: 10px;
 }
 
 .hero article img {
@@ -92,25 +94,52 @@ nav, p, section, article {
     margin-left: 10px;
 }
 
-/* ================= Footer ================= */
+/* ========== Footer ========== */
 footer {
-    background-color: var(--primary-color); /* azul oscuro */
-    color: var(--accent2-color); /* blanco */
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 20px;
     text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9em;
 }
 
 footer p {
     margin-bottom: 10px;
+    color: var(--accent2-color);
 }
 
-footer nav.socialmedia a img {
-    width: 30px;
-    margin: 0 5px;
+footer nav.socialmedia {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* ================= Footer Social Media ================= */
-.socialmedia a {
+footer nav.socialmedia a {
     text-decoration: none;
+}
+
+footer nav.socialmedia img {
+    width: 30px;
+}
+
+/* ========== Section Styling ========== */
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+section p {
+    color: #00333f; /* texto más oscuro para mejor contraste */
+}
+
+/* ========== Buttons (if needed) ========== */
+button {
+    background-color: var(--accent1-color);
+    color: var(--accent2-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
 }
